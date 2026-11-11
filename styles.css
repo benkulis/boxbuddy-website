@@ -1,0 +1,75 @@
+:root {
+  --bg: #f6f5f1;
+  --card: #ffffff;
+  --text: #202b33;
+  --text-2: #748087;
+  --border: #e3e5e1;
+  --primary: #315ce5;
+  --tint: #eaf0ff;
+  --dark: #18283d;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1722;
+    --card: #18283d;
+    --text: #eef1f4;
+    --text-2: #a9b4c7;
+    --border: #2a3b52;
+    --primary: #a7beff;
+    --tint: #1f3150;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+a { color: var(--primary); }
+
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+header.site { border-bottom: 1px solid var(--border); }
+header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 64px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 19px; color: var(--text); text-decoration: none; }
+.brand .logo { width: 30px; height: 30px; border-radius: 8px; background: var(--primary); display: grid; place-items: center; }
+.brand .logo svg { width: 18px; height: 18px; }
+nav.site { display: flex; gap: 18px; font-size: 15px; }
+nav.site a { color: var(--text-2); text-decoration: none; }
+nav.site a:hover, nav.site a[aria-current="page"] { color: var(--text); }
+
+main { padding: 48px 0 64px; }
+h1 { font-size: 34px; line-height: 1.2; margin: 0 0 8px; letter-spacing: -0.02em; }
+h2 { font-size: 22px; margin: 40px 0 10px; }
+h3 { font-size: 18px; margin: 24px 0 6px; }
+.meta { color: var(--text-2); margin: 0 0 32px; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; margin: 16px 0; display: block; overflow-x: auto; }
+th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--border); }
+th { color: var(--text-2); font-weight: 600; }
+
+.hero { text-align: center; padding: 40px 0 16px; }
+.hero h1 { font-size: 44px; }
+.hero p { font-size: 20px; color: var(--text-2); max-width: 540px; margin: 12px auto 28px; }
+.button { display: inline-block; background: var(--primary); color: #fff; padding: 12px 22px; border-radius: 12px; font-weight: 600; text-decoration: none; }
+@media (prefers-color-scheme: dark) { .button { color: var(--dark); } }
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; margin-top: 48px; }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 20px; }
+.card h3 { margin-top: 0; }
+.card p { margin: 0; color: var(--text-2); font-size: 15px; }
+details { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 10px 0; }
+summary { cursor: pointer; font-weight: 600; }
+details p { margin: 10px 0 0; color: var(--text-2); }
+.contact { background: var(--tint); border-radius: 16px; padding: 20px 24px; margin: 24px 0; }
+
+footer.site { border-top: 1px solid var(--border); color: var(--text-2); font-size: 14px; }
+footer.site .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding-top: 24px; padding-bottom: 32px; }
+footer.site a { color: var(--text-2); }
+footer.site nav { display: flex; gap: 16px; }
+
+@media (max-width: 520px) {
+  h1, .hero h1 { font-size: 30px; }
+  nav.site { gap: 12px; font-size: 14px; }
+}
