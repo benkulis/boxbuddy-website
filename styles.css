@@ -125,8 +125,8 @@ main.doc .contact { margin-top: 0; }
 .carriers li { font-size: 14px; font-weight: 600; color: var(--text-2); background: var(--card); border: 1px solid var(--border); border-radius: 999px; padding: 5px 12px; }
 .l-hero-phones { position: relative; height: 700px; }
 .l-hero-phones .phone { position: absolute; width: 280px; }
-.l-hero-phones .front { left: 6%; top: 60px; z-index: 2; }
-.l-hero-phones .back { left: 46%; top: 20px; transform: rotate(-5deg); transform-origin: 50% 100%; }
+.l-hero-phones .front { right: 0; top: 60px; z-index: 2; }
+.l-hero-phones .back { left: 2%; top: 30px; transform: rotate(-6deg); transform-origin: 50% 100%; }
 
 .l-features { padding: 40px 0; }
 .row { display: grid; grid-template-columns: 320px 1fr; gap: 80px; align-items: center; padding: 64px 0; }
@@ -160,8 +160,8 @@ main.doc .contact { margin-top: 0; }
   .carriers { justify-content: center; }
   .l-hero-phones { height: 560px; max-width: 420px; width: 100%; margin: 0 auto; }
   .l-hero-phones .phone { width: 220px; }
-  .l-hero-phones .front { left: 4%; top: 50px; }
-  .l-hero-phones .back { left: 44%; }
+  .l-hero-phones .front { right: 4%; top: 50px; }
+  .l-hero-phones .back { left: 4%; }
   .row, .row.flip { grid-template-columns: 1fr; gap: 36px; padding: 40px 0; text-align: center; }
   .row.flip .phone { order: 0; }
   .row .phone { width: 250px; }
